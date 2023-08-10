@@ -1,0 +1,33 @@
+:host ::ng-deep .mat-select-value-text {
+    background-color: green;
+    color: white;
+}
+
+::ng-deep {
+    &.mat-form-field-flex {
+        &:hover {
+            background-color: pink;
+        }
+    }
+}
+
+:host ::ng-deep {
+    .mat-form-field {
+        width: 500px;
+    }
+
+    .mat-form-field-flex {
+        border: 2px solid purple;
+        background-color: aqua;
+    }
+
+    &.mat-select-arrow {
+        color: red;
+    }
+}
+
+
+.mat-option {
+    color: red;
+    background-color: pink;
+}

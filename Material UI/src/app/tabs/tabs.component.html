@@ -1,0 +1,52 @@
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="First">Mihir</mat-tab>
+    <mat-tab label="Second">
+        <mat-tab-group mat-align-tabs="center" headerPosition="below">
+            <mat-tab label="First">R1</mat-tab>
+            <mat-tab label="Second">R2</mat-tab>
+            <mat-tab label="Third">R3</mat-tab>
+        </mat-tab-group>
+    </mat-tab>
+    <mat-tab label="Third">Ayush</mat-tab>
+</mat-tab-group>
+
+<mat-tab-group>
+    <mat-tab label="First">
+        <ng-template matTabContent>
+            Content 1
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Second">
+        <ng-template matTabContent>
+            Content 2
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Third">
+        <ng-template matTabContent>
+            Content 3
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>
+
+
+<mat-form-field appearance="fill">
+    <mat-label>Selected tab index</mat-label>
+    <input matInput type="number" [formControl]="selected">
+</mat-form-field>
+
+<div>
+    <button mat-raised-button class="example-add-tab-button" (click)="addTab(selectAfterAdding.checked)">
+        Add new tab
+    </button>
+    <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>
+</div>
+
+<mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+        Contents for {{tab}} tab
+
+        <button mat-raised-button class="example-delete-tab-button" (click)="removeTab(index)">
+            Delete Tab
+        </button>
+    </mat-tab>
+</mat-tab-group>

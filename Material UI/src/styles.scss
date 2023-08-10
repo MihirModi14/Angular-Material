@@ -1,0 +1,46 @@
+html,
+body {
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #E6EEF1;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// :host ::ng-deep .mat-select-value-text {
+//     background-color: green;
+//     color: white;
+// }
+
+// ::ng-deep {
+//     &.mat-form-field-flex {
+//         &:hover {
+//             background-color: pink;
+//         }
+//     }
+// }
+
+// :host ::ng-deep {
+//     .mat-form-field {
+//         width: 500px;
+//     }
+
+//     .mat-form-field-flex {
+//         border: 2px solid purple;
+//         background-color: aqua;
+//     }
+
+//     &.mat-select-arrow {
+//         color: red;
+//     }
+// }
+
+
+.mat-form-field-wrapper {
+    .mat-form-field-flex {
+        background-color: aqua;
+    }
+}

@@ -1,0 +1,22 @@
+:host ::ng-deep mat-tab-group {
+    & .mat-tab-label {
+        width: calc(100% / 3);
+    }
+
+    mat-tab-group {
+        & .mat-tab-label {
+            width: 200px;
+        }
+    }
+
+    & .mat-tab-body-content {
+        text-align: center;
+    }
+}
+
+
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+    margin: 8px;
+}
