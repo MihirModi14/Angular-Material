@@ -1,0 +1,117 @@
+<nav>
+  <img
+    src="../../assets/images/splash-screen.jpg"
+    srcset="
+      ../../assets/images/splash-screen@2x.jpg 2x,
+      ../../assets/images/splash-screen@3x.jpg 3x
+    "
+    class="logo"
+  />
+  <span class="ziptrrip">ziptrrip</span>
+</nav>
+
+<mat-tab-group class="roles-tabs" selectedIndex="3">
+  <mat-tab *ngFor="let menu of menuTab">
+    <ng-template mat-tab-label>
+      <mat-icon svgIcon="{{ menu.icon }}"></mat-icon>
+      <span>{{ menu.label }}</span>
+    </ng-template>
+    <ng-template matTabContent>
+      <div *ngIf="menu.label === 'Roles & Privilege'">
+        <div class="roles">
+          <div class="roles__left">
+            <button mat-flat-button routerLink="edit">Create New Role</button>
+            <mat-selection-list [multiple]="false">
+              <h2>System Roles</h2>
+              <mat-list-option>Super Admin</mat-list-option>
+              <mat-list-option>Manager</mat-list-option>
+              <mat-list-option>Super Admin</mat-list-option>
+              <mat-list-option>Class Type</mat-list-option>
+            </mat-selection-list>
+
+            <mat-selection-list [multiple]="false">
+              <h2>Created Roles</h2>
+              <mat-list-option>Roles1</mat-list-option>
+              <mat-list-option>Roles2</mat-list-option>
+              <mat-list-option>Roles3</mat-list-option>
+            </mat-selection-list>
+          </div>
+          <div class="roles__right">
+            <mat-card>
+              <div class="row">
+                <div>
+                  <mat-card-title>Super Admin</mat-card-title>
+                  <mat-card-subtitle>Roles & Privileges Name</mat-card-subtitle>
+                </div>
+                <p class="spacer"></p>
+                <mat-icon routerLink="edit">edit</mat-icon>
+              </div>
+
+              <mat-tab-group>
+                <mat-tab label="Users">
+                  <table
+                    mat-table
+                    [dataSource]="userDetails"
+                    class="mat-elevation-z8"
+                  >
+                    <ng-container matColumnDef="Employee Name">
+                      <th mat-header-cell *matHeaderCellDef>
+                        Employee Name
+                        <mat-icon svgIcon="up_arrow"></mat-icon>
+                      </th>
+                      <td mat-cell *matCellDef="let element">
+                        {{ element.name }}
+                      </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Email">
+                      <th mat-header-cell *matHeaderCellDef>Email</th>
+                      <td mat-cell *matCellDef="let element">
+                        {{ element.email }}
+                      </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Contact">
+                      <th mat-header-cell *matHeaderCellDef>Contact</th>
+                      <td mat-cell *matCellDef="let element">
+                        {{ element.contact }}
+                      </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ID">
+                      <th mat-header-cell *matHeaderCellDef>ID</th>
+                      <td mat-cell *matCellDef="let element">
+                        {{ element.id }}
+                      </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Grade">
+                      <th mat-header-cell *matHeaderCellDef>Grade</th>
+                      <td mat-cell *matCellDef="let element">
+                        {{ element.grade }}
+                      </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Department">
+                      <th mat-header-cell *matHeaderCellDef>Department</th>
+                      <td mat-cell *matCellDef="let element">
+                        {{ element.department }}
+                      </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr
+                      mat-row
+                      *matRowDef="let row; columns: displayedColumns"
+                    ></tr>
+                  </table>
+                </mat-tab>
+                <mat-tab label="Privileges">Priviles</mat-tab>
+              </mat-tab-group>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

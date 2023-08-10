@@ -1,0 +1,475 @@
+@import '../../scss/abstracts/variables';
+
+
+nav {
+    .mat-icon {
+        margin: 5.2rem 7.03rem 0 0;
+        color: $yankees-blue-color;
+        opacity: 0.6;
+    }
+}
+
+// Tabs
+.mat-tab-group.roles-tabs {
+    padding: 0rem 9rem 0rem 10.7rem;
+
+    .mat-icon {
+        margin-right: 1.35rem;
+        height: 1.9rem;
+        width: 1.9rem;
+    }
+
+    & .mat-tab-header {
+        margin-bottom: 5.25rem;
+    }
+
+    & .mat-tab-labels {
+        & .mat-tab-label {
+            color: $yankees-blue-color;
+            margin: 0.1rem 0rem 0.06rem 0rem;
+            padding: 0rem 12rem 0rem 0.9rem;
+            opacity: 1;
+
+            span {
+                font-size: 1.6rem;
+                font-weight: bold;
+                line-height: 1.25;
+                opacity: 0.8;
+            }
+
+            svg {
+                path {
+                    fill: $yankees-blue-color;
+                }
+            }
+
+            &-active {
+                svg {
+                    path {
+                        fill: $robin-egg-blue-color;
+                    }
+                }
+
+                color: $robin-egg-blue-color;
+                opacity: 1;
+            }
+        }
+    }
+
+    & mat-ink-bar {
+        display: none;
+    }
+}
+
+// Card
+mat-card.mat-card {
+    background-color: $white-color;
+    border: solid 0.05rem rgba($yankees-blue-color, 0.2);
+    padding: 4rem 5.28rem 5.9rem 4rem;
+    border-radius: 0.8rem;
+
+    .mat-icon.mat-icon {
+        cursor: pointer;
+        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .mat-card-title {
+        color: $yankees-blue-color;
+        margin-bottom: 1.2rem;
+        font-size: 2.6rem;
+        font-weight: bold;
+        line-height: 1.27;
+    }
+
+    .mat-card-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 4.01rem;
+    }
+}
+
+// Button
+button.mat-flat-button {
+    color: $white-color;
+    background-color: $robin-egg-blue-color;
+    margin-bottom: 3rem;
+    padding: 1.1rem 2.1rem 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.28;
+}
+
+.roles {
+    &__left {
+        .mat-list-base {
+            padding: 0rem 0rem 6.03rem 0rem;
+
+            & .mat-list-option {
+                .mat-list-item-content {
+                    padding: 0 !important;
+                }
+
+                &:hover {
+                    background-color: $white-color;
+                }
+
+                &[aria-selected="true"] {
+                    color: $brilliant-azure-color;
+                    background-color: $white-color;
+                }
+
+                color: $independence-color;
+                height: 4.6rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+                line-height: 1.28;
+            }
+        }
+    }
+
+    &__right {
+
+        // Table
+        .mat-table {
+            width: 100%;
+
+            th.mat-header-cell:first-of-type,
+            td.mat-cell:first-of-type,
+            td.mat-footer-cell:first-of-type {
+                padding-left: 3.5rem;
+            }
+
+            thead {
+                .mat-icon {
+                    svg {
+                        width: 0.89rem;
+                        height: 1.25rem;
+                        margin-left: 1.05rem;
+
+                        path {
+                            fill: $robin-egg-blue-color;
+                        }
+                    }
+                }
+
+                th {
+                    color: $yankees-blue-color;
+                    font-weight: bold;
+                    font-size: 1.7rem;
+                    line-height: 1.24;
+                    opacity: 0.6;
+
+                    &:first-child {
+                        width: 32.3rem;
+                    }
+
+                    &:nth-child(2) {
+                        width: 29.6rem;
+                    }
+
+                    &:nth-child(3) {
+                        width: 21.3rem;
+                    }
+
+                    &:nth-child(4) {
+                        width: 14rem;
+                    }
+
+                    &:nth-child(5) {
+                        width: 15.1rem;
+                    }
+                }
+            }
+
+            tbody {
+                tr.mat-row {
+                    height: 6.3rem;
+
+                    td {
+                        color: $yankees-blue-color;
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        line-height: 1.28;
+                    }
+
+                    &:last-child {
+                        td {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .mat-tab-group {
+            .mat-tab-header {
+                border-bottom: none;
+                margin-bottom: 4.75rem;
+            }
+
+            .mat-tab-labels {
+                border-bottom: 0.1rem solid rgba($yankees-blue-color, 0.2);
+
+                .mat-tab-label {
+                    font-weight: bold;
+                    margin: 0rem;
+                    padding: 0rem;
+                    font-size: 2rem;
+                    height: 6.44rem;
+                    min-width: 12.9rem;
+                    opacity: 1;
+
+                    &:first-child {
+                        margin-left: 2rem;
+                    }
+
+                    &-active {
+                        color: $brilliant-azure-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .mat-ink-bar.mat-ink-bar {
+                border: 0.1rem solid rgba($yankees-blue-color, 0.2);
+                border-bottom: 0.1rem solid $white-color;
+                display: block;
+                background-color: transparent;
+                height: 6.44rem;
+            }
+        }
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+
+    .mat-select {
+        .mat-select-value {
+            color: $yankees-blue-color;
+            margin-top: 1.2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.28;
+        }
+    }
+
+    &-wrapper {
+        padding-bottom: 0;
+        margin: 0;
+
+        .mat-select-arrow-wrapper {
+            width: 1.3rem;
+
+            .mat-select-arrow {
+                border: none;
+            }
+
+            background: url("../../images/icons/chevron.svg") no-repeat;
+            object-fit: contain;
+            margin: 2.7rem 2.02rem 0 0;
+        }
+
+
+        .mat-form-field-suffix {
+            .mat-datepicker-toggle {
+                margin-right: 1rem;
+
+                .mat-icon-button {
+                    svg {
+                        width: 1.85rem;
+                        height: 1.85rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &-infix {
+        border-top: 0.8rem solid transparent;
+        margin-left: 1.95rem;
+
+        input {
+            caret-color: $robin-egg-blue-color;
+            margin-top: 0.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.28;
+        }
+    }
+
+    &.mat-form-field-can-float.mat-focused {
+        & .mat-form-field-label {
+            color: $robin-egg-blue-color;
+            font-weight: 600;
+            line-height: 1.29;
+            opacity: 1;
+        }
+    }
+
+    &.mat-focused {
+        & .mat-form-field-infix {
+            border-top: 0.7rem solid transparent;
+        }
+    }
+
+    &:nth-child(4) {
+        margin-bottom: 5rem;
+    }
+
+    &:nth-child(6) {
+        margin-bottom: 2.2rem;
+    }
+
+    &-appearance-outline {
+        margin-bottom: 4rem;
+
+        // & .mat-form-field-outline {
+        //     color: rgba($yankees-blue-color, 1);
+        //     // opacity: 0.2 !important;
+        // }
+
+        &.mat-focused .mat-form-field-flex {
+            & .mat-form-field-outline {
+                color: $robin-egg-blue-color;
+            }
+        }
+
+        // &.mat-form-field-appearance-outline:not(.mat-form-field-disabled) {
+        //     & .mat-form-field-flex:hover {
+        //         & .mat-form-field-outline {
+        //             // opacity: 1;
+        //         }
+        //     }
+        // }
+
+        & .mat-form-field-outline-thick {
+            color: rgba($yankees-blue-color, 1);
+
+            .mat-form-field-outline-start,
+            .mat-form-field-outline-end,
+            .mat-form-field-outline-gap {
+                border-width: 1px;
+            }
+        }
+
+        & .mat-form-field-flex {
+            height: 6.4rem;
+
+            & .mat-form-field-label {
+                font-size: 1.8rem;
+                font-weight: 600;
+                opacity: 0.4;
+            }
+
+            & .mat-form-field {
+                &-outline {
+                    height: 100%;
+
+                    &-start {
+                        border-radius: 0.3rem 0 0 0.3rem;
+                    }
+
+                    &-end {
+                        border-radius: 0 0.3rem 0.3rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.edit-container.btn {
+    .mat-flat-button {
+        margin: 0 2rem 0 0;
+        font-size: 2rem;
+        line-height: 1.25;
+        border-radius: 0.3rem;
+
+        &:first-child {
+            color: $white-color;
+            padding: 2rem 6.7rem;
+            font-weight: 600;
+        }
+
+        &:last-child {
+            background-color: $white-color;
+            color: $yankees-blue-color;
+            border: 0.1rem solid $yankees-blue-color;
+            box-shadow: 0 -0.4rem 0.6rem 0 rgba($black-color, 0.1);
+            font-weight: normal;
+            padding: 2rem 2.9rem;
+            opacity: 0.4;
+        }
+    }
+}
+
+.mat-radio-group {
+    display: inline-block;
+    margin-bottom: 7.1rem;
+
+    mat-label,
+    .mat-radio-label {
+        color: $yankees-blue-color;
+        vertical-align: middle;
+        margin-right: 3rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.28;
+        opacity: 0.4;
+    }
+
+    mat-label {
+        opacity: 1;
+    }
+
+    .mat-radio-button.mat-radio-checked {
+
+        label {
+            opacity: 1;
+        }
+
+        & .mat-radio-outer-circle {
+            border-color: $robin-egg-blue-color;
+        }
+    }
+
+    .mat-radio-label {
+        margin-right: 0rem;
+
+        .mat-radio-container {
+            height: 2.6rem;
+            width: 2.6rem;
+
+            .mat-ripple {
+                & .mat-ripple-element {
+                    background-color: $robin-egg-blue-color;
+                }
+            }
+
+            .mat-radio-outer-circle {
+                width: 100%;
+                height: 100%;
+            }
+
+            .mat-radio-inner-circle {
+                background-color: $white-color;
+                border: 0.7rem solid $robin-egg-blue-color;
+                transition: transform ease 280ms, background-color ease 280ms, opacity linear 1ms 280ms;
+                transform: scale(1);
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .mat-radio-button {
+        margin-right: 4rem;
+    }
+}
+
+.mat-divider {
+    background-color: $white-color;
+    box-shadow: 0 -0.4rem 0.6rem 0 rgba($black-color, 0.2);
+}

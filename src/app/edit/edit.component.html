@@ -1,0 +1,97 @@
+<nav>
+    <img src="../../assets/images/splash-screen.jpg" srcset="../../assets/images/splash-screen@2x.jpg 2x,
+    ../../assets/images/splash-screen@3x.jpg 3x" class="logo">
+    <span class="ziptrrip">ziptrrip</span>
+    <p class="spacer"></p>
+    <mat-icon routerLink="/">close</mat-icon>
+</nav>
+
+<div class="edit-container">
+    <h2>This is to keep your profile updated.</h2>
+
+    <div class="row">
+        <div class="col-md-6 pl-0">
+            <mat-form-field appearance="outline">
+                <mat-label>First name</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="col-md-6 pr-0">
+            <mat-form-field appearance="outline">
+                <mat-label>Last name</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Email adrees</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Contact number</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Employee ID</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Employee Grade</mat-label>
+        <mat-select>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon svgIcon="calendar"></mat-icon>
+        </mat-datepicker-toggle>
+
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+        <mat-label>Nationality</mat-label>
+        <mat-select>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Role</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Department</mat-label>
+        <mat-select>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-radio-group aria-label="approval">
+        <mat-label>Approval* </mat-label>
+        <mat-radio-button value="1">Yes</mat-radio-button>
+        <mat-radio-button value="2">No</mat-radio-button>
+    </mat-radio-group>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="edit-container btn">
+    <button mat-flat-button routerLink="/">Save</button>
+    <button mat-flat-button routerLink="/">Cancel</button>
+</div>

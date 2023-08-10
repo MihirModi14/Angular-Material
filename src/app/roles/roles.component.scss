@@ -1,0 +1,23 @@
+@import '../../assets/scss/abstracts/abstracts';
+
+.roles {
+    display: flex;
+
+    &__left {
+        width: 34.34rem;
+    }
+
+    &__right {
+        width: calc(100% - 34.34rem);
+    }
+
+    h2 {
+        color: $yankees-blue-color;
+        font-weight: bold;
+        font-family: 'Mulish';
+        margin-bottom: 1.9rem;
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 1.28;
+    }
+}
